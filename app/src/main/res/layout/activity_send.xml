@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="45dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ticket発行"
+            android:textSize="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#616060"/>
+
+        <EditText
+            android:id="@+id/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="8dp"
+            android:hint="タイトル[例:肩たたき150回]"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#000000"
+            android:textColorHint="#9017931C"/>
+
+        <EditText
+            android:id="@+id/date_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="75dp"
+            android:hint="期限[例:2024.1.1]"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColorHint="#9017931C"
+            android:textColor="#000000"/>
+
+        <Button
+            android:id="@+id/pub_btn"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et"
+            android:layout_marginTop="73dp"
+            android:text="発行"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#03983E"/>
+
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="69dp"
+            android:layout_toEndOf="@+id/pub_btn"
+            android:text="チケット情報を保存!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#03983E"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bar_background"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="368dp">
+
+            <Button
+                android:id="@+id/home_btn"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#3F51B5"
+                android:text="ホーム"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/send_btn"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="143dp"
+                android:layout_toEndOf="@+id/home_btn"
+                android:backgroundTint="#3F51B5"
+                android:text="発行"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/list_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="-233dp"
+                android:layout_toStartOf="@+id/home_btn"
+                android:backgroundTint="#3F51B5"
+                android:text="使用と一覧"
+                android:textColor="#FFFFFF"/>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/qr_code_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/pub_btn"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="111dp"
+            android:scaleType="centerInside" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
