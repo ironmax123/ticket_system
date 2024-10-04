@@ -10,29 +10,39 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp">
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-105dp">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="チケット一覧"
+            android:textColor="#616060"
             android:textSize="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="#616060"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="536dp"
             android:layout_below="@+id/textView"
-            android:layout_marginTop="0dp"
-            android:text=""
-            android:textColor="#616060"
-            android:textSize="19dp" />
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="62dp">
+            <!-- スクロールさせたいTextView -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="0dp"
+                android:text=""
+                android:textColor="#616060"
+                android:textSize="19dp" />
+        </ScrollView>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -49,10 +59,10 @@
                 android:layout_height="50dp"
                 android:backgroundTint="#3F51B5"
                 android:text="ホーム"
+                android:textColor="#FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:textColor="#FFFFFF"/>
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/send_btn"
@@ -62,10 +72,10 @@
                 android:layout_toEndOf="@+id/home_btn"
                 android:backgroundTint="#3F51B5"
                 android:text="発行"
+                android:textColor="#FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:textColor="#FFFFFF"/>
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/list_btn"
@@ -75,7 +85,7 @@
                 android:layout_toStartOf="@+id/home_btn"
                 android:backgroundTint="#3F51B5"
                 android:text="使用と一覧"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFFFFF" />
         </RelativeLayout>
 
         <Button
@@ -86,9 +96,9 @@
             android:layout_marginStart="3dp"
             android:layout_marginTop="-51dp"
             android:layout_toEndOf="@+id/textView"
+            android:backgroundTint="#E91E63"
             android:text="使用する！"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#E91E63"/>
+            android:textColor="#FFFFFF" />
 
         <!--<Button
              android:id="@+id/del_btn"
